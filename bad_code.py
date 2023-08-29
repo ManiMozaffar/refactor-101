@@ -30,7 +30,6 @@ def create_file(new_files, source, source_id, comment, thisuser, db):
     for new_file in new_files:
         if source not in ["category"]:
             raise HTTPException(status_code=400, detail="Source error")
-        the_one(db, Categories, source_id)
         # if db.query(Uploaded_files).filter(Uploaded_files.source == source,
         #                                    Uploaded_files.source_id == source_id).first():
         #     raise HTTPException(status_code=400, detail="This source already have his own file!")
